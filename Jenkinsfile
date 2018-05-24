@@ -12,5 +12,11 @@ pipeline {
         }
       }
     }
+    
+    stage('Deploy') {
+      steps {
+        build job: 'deploy'
+      }
+    }
   }
 }
